@@ -526,7 +526,7 @@ EXAMPLES:
                 foreach (ManagementObject proc in searcher.Get())
                 {
                     object ret = proc.InvokeMethod("Terminate", null);
-                    Console.WriteLine(string.Format("[+] Attempted to terminate remote process ({0}). Returned: {1}", process, ret));
+                    Console.WriteLine(string.Format("[+] Attempted to terminate remote process: ({0}). Returned: {1}", process, ret));
                 }
 
                 Console.WriteLine(string.Format("[x] Process {0} not found", process));
@@ -1228,7 +1228,7 @@ EXAMPLES:
                 else
                 {
                     Console.WriteLine("[*] No results could be retrieved as apparently we didn't set environment variable with results.");
-                    Console.WriteLine("    This may indicate called SharpWMI did not invoked WMI using elevated/impersonated token.");
+                    Console.WriteLine("    This may indicate: called SharpWMI did not invoked WMI using elevated/impersonated token.");
                 }
             }
             catch (Exception ex)
